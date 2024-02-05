@@ -1,2 +1,1 @@
-x=input()
-print(f'{x}??!')
+print(input()+"??!")
