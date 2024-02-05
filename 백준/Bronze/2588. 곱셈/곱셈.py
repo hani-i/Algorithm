@@ -1,0 +1,10 @@
+A = int(input())
+B = int(input())
+x=A*((B%10))
+y=A*((B//10)%10)
+z=A*(B//100)
+
+print(x)
+print(y)
+print(z)
+print(x+(y*10)+(z*100))
