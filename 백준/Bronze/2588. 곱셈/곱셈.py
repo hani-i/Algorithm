@@ -1,10 +1,11 @@
 A = int(input())
-B = int(input())
-x=A*((B%10))
-y=A*((B//10)%10)
-z=A*(B//100)
+B = input()
+
+x = A*int(B[2])
+y = A*int(B[1])
+z = A*int(B[0])
 
 print(x)
 print(y)
 print(z)
-print(x+(y*10)+(z*100))
+print(x+y*10+z*100)
