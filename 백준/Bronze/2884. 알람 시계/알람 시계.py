@@ -1,9 +1,9 @@
 x,y = map(int, input().split())
 
-if(x*60+y<45):
-    z = 45-y
-    print (f'23 {60-z}')
+if 45<=y:
+    print(f'{x} {y-45}')
 
 else:
-    z = (x*60+y)-45
-    print(f'{z//60} {z%60}')
+    if x==0: x=23
+    else: x-=1
+    print(f'{x} {y+15}')
