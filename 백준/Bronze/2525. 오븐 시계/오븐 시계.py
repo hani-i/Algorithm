@@ -1,25 +1,14 @@
-def rehour(h):
-    if h>=24:
-        h=h-24
-    return h
+H, M = map(int, input().split())
+time = int(input())
 
-def main():
-    hour, mi = map(int, input().split())
-    time = int(input())
-    th = time // 60  # 시간
-    tm = time % 60  # 분
-    hour += th
-    hour = rehour(hour)
+H+=time//60
+M+=time%60
 
-    if 60 <= (mi + tm):
-        hour += 1
-        hour = rehour(hour)
-        mi = (mi+tm)-60
+if 60<=M:
+    M-=60
+    H+=1
 
-    else:
-        mi+=tm
+if 24<=H:
+    H-=24
 
-    print(f'{hour} {mi}')
-
-if __name__ == "__main__":
-    main()
+print(f'{H} {M}')
