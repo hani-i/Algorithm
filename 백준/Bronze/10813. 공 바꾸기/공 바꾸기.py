@@ -1,9 +1,5 @@
+
 import sys
-def swap(x,y):
-    tmp=x
-    x=y
-    y=tmp
-    return x,y
 
 if __name__ == '__main__':
     N,M = map(int, sys.stdin.readline().split())
@@ -14,7 +10,7 @@ if __name__ == '__main__':
 
     for _ in range(M):
         x,y = map(int, sys.stdin.readline().split())
-        array[x-1],array[y-1] = swap(array[x-1],array[y-1])
+        array[x-1],array[y-1] = array[y-1],array[x-1]
 
 for a in array:
     print(a,end=' ')
