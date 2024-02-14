@@ -1,17 +1,17 @@
 import sys
 
 if __name__ == '__main__':
-     str = sys.stdin.readline().rstrip()
-     str = str.upper()
-     array = [0 for i in range(26)]
 
-     for i in str:
-          x = ord(i)
-          array[x-65]+=1
+     x = sys.stdin.readline().rstrip()
+     x = x.upper()
+     y = list(set(x))
+     co = [0 for i in range(len(y))]
 
-     y = array.count(max(array))
-     if y>1:
+     for i in range(len(y)):
+          co[i]=x.count(y[i])
+
+     if co.count(max(co))>1:
           print("?")
 
      else:
-          print(chr(array.index(max(array)) + 65))
+          print(y[co.index(max(co))])
