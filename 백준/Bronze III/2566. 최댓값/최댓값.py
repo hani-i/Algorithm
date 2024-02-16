@@ -1,15 +1,16 @@
-import sys
+nums = []
 
-if __name__ == '__main__':
-    N = 9
-    MAX = 0
-    row = 0
-    A = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+for _ in range(9):
+    nums.append(list(map(int,input().split())))
 
-    for i in range(N):
-        if MAX < max(A[i]):
-            MAX = max(A[i])
-            row = i
-
-    print(MAX)
-    print(row+1,A[row].index(MAX)+1)
+x = 0
+y = 0
+max_num = -1
+for i in range(9):
+    for j in range(9):
+        if nums[i][j] > max_num:
+            x = i + 1
+            y = j + 1
+            max_num= nums[i][j]
+print(max_num)
+print(x, y)
