@@ -1,7 +1,14 @@
 import sys
 
 if __name__ == '__main__':
-    B, N = sys.stdin.readline().rstrip('\n').split()
-    N = int(N)
+    N, B = sys.stdin.readline().rstrip('\n').split()
+    B = int(B)
+    num = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    idx = len(N)-1
+    result = 0
 
-    print(int(B,N))
+    for i in range(len(N)):
+        result += num.index(N[idx]) * B**i
+        idx-=1
+
+    print(result)
