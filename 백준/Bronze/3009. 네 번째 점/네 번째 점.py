@@ -1,23 +1,25 @@
 import sys
 
-def check(list):
-    if list.count(list[0]) == 1:
-        return list[0]
-    elif list.count(list[1]) == 1:
-        return list[1]
-    else:
-        return list[2]
 
 
 if __name__ == '__main__':
-    a, d = map(int, sys.stdin.readline().split())
-    b, e = map(int, sys.stdin.readline().split())
-    c, f = map(int, sys.stdin.readline().split())
+    xlist = []
+    ylist = []
+    x = 0
+    y = 0
 
-    Xlist = [a, b, c]
-    Ylist = [d, e, f]
+    for _ in range(3):
+        a, b = map(int,sys.stdin.readline().split())
+        xlist.append(a)
+        ylist.append(b)
 
-    print(check(Xlist), end=" ")
-    print(check(Ylist))
+    for i in range(3):
+        if xlist.count(xlist[i]) == 1:
+            x = xlist[i]
+            
+        if ylist.count(ylist[i]) == 1:
+            y = ylist[i]
+
+    print(x,y)
 
 
