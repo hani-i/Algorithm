@@ -12,13 +12,5 @@ if __name__ == '__main__':
         xList.append(x)
         yList.append(y)
 
-    maxX = max(xList)
-    minX = min(xList)
-    maxY = max(yList)
-    minY = min(yList)
-
-    if maxX == minX or maxY == minY:
-        print(0)
-    else:
-        print((maxX-minX) * (maxY-minY))
+    print((max(xList)-min(xList)) * (max(yList)-min(yList)))
 
