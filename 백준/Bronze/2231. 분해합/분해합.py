@@ -5,18 +5,11 @@ if __name__ == '__main__':
     N = int(sys.stdin.readline())
 
     for i in range(1, N+1):
-        myStr = str(i)
-        myList = []
-        SUM = 0
-        
-        for m in myStr:
-            myList.append(m)
-            SUM += int(m)
+        value = i + sum(map(int, str(i)))
 
-        if i+SUM == N:
+        if value == N:
             print(i)
             break
 
-        elif i == N:
+        if i == N:
             print(0)
-
