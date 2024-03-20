@@ -6,8 +6,8 @@ if __name__ == '__main__':
     N = int(sys.stdin.readline())
     myList = []
     for i in range(N):
-        INPUT = sys.stdin.readline().rstrip().split()
-        myList.append([int(INPUT[0]), INPUT[1]])
+        a,b = sys.stdin.readline().split()
+        myList.append((int(a), b))
 
     myList.sort(key=lambda x: x[0])
     for m in myList:
